@@ -8,8 +8,11 @@ java {
 }
 
 dependencies {
-    implementation("com.madgag.spongycastle:core:1.58.0.0")
-    implementation("com.madgag.spongycastle:bcpkix-jdk15on:1.58.0.0")
+//    implementation("com.madgag.spongycastle:core:1.58.0.0")
+//    implementation("com.madgag.spongycastle:bcpkix-jdk15on:1.58.0.0")
+    implementation("org.bouncycastle:bcpkix-jdk18on:1.76")
+    implementation("org.bouncycastle:bcprov-jdk18on:1.76")
+
     implementation("javax.xml.bind:jaxb-api:2.3.1")
     testImplementation("org.hamcrest:hamcrest-all:1.3")
     testImplementation("junit:junit:4.13.2")

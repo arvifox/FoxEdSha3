@@ -8,7 +8,7 @@ import java.security.spec.AlgorithmParameterSpec;
 import com.arvifox.libed.ed25519.math.Curve;
 import com.arvifox.libed.ed25519.math.GroupElement;
 import com.arvifox.libed.ed25519.math.ScalarOps;
-import org.spongycastle.jce.provider.BouncyCastleProvider;
+import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
 /**
  * Parameter specification for an EdDSA algorithm.
@@ -20,6 +20,7 @@ public class EdDSAParameterSpec implements AlgorithmParameterSpec, Serializable 
   private static final long serialVersionUID = 8274987108472012L;
 
   static {
+    Security.removeProvider("BC");
     Security.addProvider(new BouncyCastleProvider());
   }
 
